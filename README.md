@@ -66,14 +66,14 @@ ensures **fast convergence** while avoiding instability due to overly large upda
 **Standard Normalization + Adam Optimizer**
 
 The reason why the loss at $10^{1}$ (`1e+1`) spikes drastically is due to the instability introduced by combining a **high learning rate** with the adaptive update mechanism of the **Adam optimizer**. At excessive learning rates, Adam's adjustments overshoot the optimal parameter region, leading to divergence and sudden increases in loss.
->
-> Without Batch Normalization to regulate internal covariate shifts, the model becomes highly sensitive to such aggressive updates, explaining the sharp loss escalation at higher learning rates.
->
-> The Adam optimizer updates parameters using:
->
-> $$
-> \theta_{t+1} = \theta_t - \eta \cdot \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
-> $$
+
+Without Batch Normalization to regulate internal covariate shifts, the model becomes highly sensitive to such aggressive updates, explaining the sharp loss escalation at higher learning rates.
+
+The Adam optimizer updates parameters using:
+
+$$
+\theta_{t+1} = \theta_t - \eta \cdot \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
+$$
 
 The **lowest loss** and most stable convergence occur at **$1 \times 10^{-3}$** (`lr_min`), marking it as the optimal learning rate for this setup, balancing both stability and speed.
 
