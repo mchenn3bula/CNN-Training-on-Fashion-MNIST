@@ -46,11 +46,7 @@ This behavior highlights the importance of carefully tuning the learning rate wh
 
 
 #### **Conclusion**
-The optimal learning rate
-$$
-\( lr_{\text{min}} \)
-$$
-for this configuration is approximately:
+The optimal learning rate \( lr_{\text{min}} \) for this configuration is approximately:
 
 lr_min ≈ 1e-1
 
