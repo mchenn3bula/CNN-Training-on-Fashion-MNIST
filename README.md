@@ -40,13 +40,17 @@ is not displayed due to **numerical instability**.
 
 When using a **high learning rate** in combination with **Batch Normalization**, the scale (\( \gamma \)) and shift (\( \beta \)) parameters can be updated too aggressively. This excessive adjustment amplifies the activations throughout the network layers, leading to what's known as **exploding activations**. As a result, the network outputs diverge, causing the loss to become:
 
-loss = NaN  # Not a Number
+loss = NaN
 
 This behavior highlights the importance of carefully tuning the learning rate when Batch Normalization is involved.
 
 
 #### **Conclusion**
-The optimal learning rate \( lr_{\text{min}} \) for this configuration is approximately:
+The optimal learning rate
+$$
+\( lr_{\text{min}} \)
+$$
+for this configuration is approximately:
 
 lr_min ≈ 1e-1
 
