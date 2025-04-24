@@ -16,11 +16,8 @@ This project explores the impact of Batch Normalization, optimizers, learning ra
 ## Visualizations
 ![image_1.png](./image_1.png)
 
-**Batch Normalization + SGD Optimizer**
-
 The plot above demonstrates how the **training loss** changes with different learning rates when using **Batch Normalization** combined with the **SGD optimizer**.
 
-#### **Observation**
 As the learning rate increases, the loss decreases significantly and reaches its minimum when the learning rate approaches:
 
 $$
