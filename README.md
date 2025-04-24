@@ -38,7 +38,7 @@ $$
 
 is not displayed due to **numerical instability**.
 
-When using a **high learning rate** in combination with **Batch Normalization**, the scale (\( \gamma \)) and shift (\( \beta \)) parameters can be updated too aggressively. This excessive adjustment amplifies the activations throughout the network layers, leading to what's known as **exploding activations**. As a result, the network outputs diverge, causing the loss to become:
+When using a **high learning rate** in combination with **Batch Normalization**, the scale $ \gamma $ and shift $ \beta $ parameters can be updated too aggressively. This excessive adjustment amplifies the activations throughout the network layers, leading to what's known as **exploding activations**. As a result, the network outputs diverge, causing the loss to become:
 
 loss = NaN
 
@@ -46,7 +46,7 @@ This behavior highlights the importance of carefully tuning the learning rate wh
 
 
 #### **Conclusion**
-The optimal learning rate \( lr_{\text{min}} \) for this configuration is approximately:
+The optimal learning rate $ lr_{\text{min}} $ for this configuration is approximately:
 
 lr_min ≈ 1e-1
 
@@ -55,11 +55,6 @@ This aligns with the principles of gradient descent, where parameter updates fol
 $$
 \theta_{t+1} = \theta_t - \eta \cdot \nabla L(\theta_t)
 $$
-
-Where:
-- \( \theta \) = Model parameters  
-- \( \eta \) = Learning rate  
-- \( \nabla L(\theta_t) \) = Gradient of the loss function  
 
 Choosing:
 
